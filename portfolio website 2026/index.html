@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premraj Gaikwad | Full Stack &amp; Java Developer</title>
+<meta name="description" content="Premraj Gaikwad — Aspiring Software Developer, Full Stack Developer &amp; Java Backend Developer. Building premium, high-performance web experiences.">
+<meta name="theme-color" content="#050505">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= LOADER ================= -->
+<div id="loader" class="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-logo">PG</div>
+    <div class="loader-name">PREMRAJ&nbsp;GAIKWAD</div>
+    <div class="loader-bar-track"><div class="loader-bar" id="loaderBar"></div></div>
+    <div class="loader-percent" id="loaderPercent">0%</div>
+  </div>
+</div>
+
+<!-- ================= CUSTOM CURSOR ================= -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ================= BACKGROUND LAYERS ================= -->
+<div class="bg-noise" aria-hidden="true"></div>
+<div class="bg-grid" aria-hidden="true"></div>
+<canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+<!-- ================= NAV ================= -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo" data-magnetic>PG<span class="dot">.</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <a href="assets/Premraj_Gaikwad_Resume_01.pdf" download class="btn btn-glass nav-cta" data-magnetic>
+      <i data-lucide="download"></i><span>Resume</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow reveal-up"><span class="pulse-dot"></span>Open to opportunities · Pune, India</p>
+        <h1 class="hero-title reveal-up">
+          <span class="hero-hello">Hi, I'm</span>
+          <span class="hero-name">PREMRAJ<br>GAIKWAD</span>
+        </h1>
+        <div class="hero-role reveal-up">
+          <span class="role-prefix">I build</span>
+          <span class="role-swap" id="roleSwap"></span>
+        </div>
+        <p class="hero-desc reveal-up">
+          IT Engineering student and Frontend Developer Intern crafting responsive, user-focused
+          web applications with HTML, CSS, JavaScript &amp; Java. Strong foundation in
+          object-oriented programming, growing fast toward full-stack &amp; backend engineering.
+        </p>
+        <div class="hero-actions reveal-up">
+          <a href="assets/Premraj_Gaikwad_Resume_01.pdf" download class="btn btn-primary" data-magnetic>
+            <i data-lucide="download"></i><span>Download Resume</span>
+          </a>
+          <a href="#projects" class="btn btn-outline" data-magnetic>
+            <i data-lucide="rocket"></i><span>View Projects</span>
+          </a>
+          <a href="#contact" class="btn btn-ghost" data-magnetic>
+            <i data-lucide="handshake"></i><span>Hire Me</span>
+          </a>
+        </div>
+        <div class="hero-stats reveal-up">
+          <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-label">Core Projects</span></div>
+          <div class="stat"><span class="stat-num" data-count="6">0</span><span class="stat-label">Months Internship</span></div>
+          <div class="stat"><span class="stat-num" data-count="10">0</span><span class="stat-label">Tech Skills</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal-up">
+        <div class="profile-card glass-card" data-tilt>
+          <div class="profile-glow"></div>
+          <div class="profile-avatar">
+            <span>PG</span>
+          </div>
+          <h3 class="profile-name">Premraj D. Gaikwad</h3>
+          <p class="profile-role">Full Stack &amp; Java Developer</p>
+          <ul class="profile-meta">
+            <li><i data-lucide="map-pin"></i> Pune, Maharashtra, India</li>
+            <li><i data-lucide="phone"></i> +91 95618 57309</li>
+            <li><i data-lucide="mail"></i> premrajgaikwad1@gmail.com</li>
+          </ul>
+          <div class="profile-links">
+            <a href="#" target="_blank" rel="noopener" class="icon-btn" aria-label="LinkedIn" data-magnetic><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" target="_blank" rel="noopener" class="icon-btn" aria-label="GitHub" data-magnetic><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:premrajgaikwad1@gmail.com" class="icon-btn" aria-label="Email" data-magnetic><i data-lucide="mail"></i></a>
+          </div>
+        </div>
+        <div class="floating-chip chip-1 glass-card">
+          <i data-lucide="code-2"></i><span>Java Backend</span>
+        </div>
+        <div class="floating-chip chip-2 glass-card">
+          <i data-lucide="layout-template"></i><span>Frontend Dev</span>
+        </div>
+        <div class="floating-chip chip-3 glass-card">
+          <i data-lucide="git-branch"></i><span>Problem Solver</span>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll down"><i data-lucide="chevron-down"></i></a>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="section">
+    <div class="container">
+      <p class="section-tag reveal-up">01 · About</p>
+      <h2 class="section-title reveal-up">The developer behind the code</h2>
+      <div class="about-grid">
+        <p class="about-text reveal-up">
+          I'm an IT Engineering student with hands-on experience building responsive, user-focused
+          web applications using HTML, CSS, JavaScript and Java. As a Frontend Developer Intern,
+          I gained practical exposure to UI development, DOM manipulation and debugging inside a
+          professional team environment. I have a strong foundation in object-oriented programming
+          &mdash; Java, C++ and Python &mdash; and I'm eager to grow these skills toward full-stack
+          and backend development roles. I'm a quick learner with strong problem-solving ability
+          and a track record of independently delivering complete, working projects.
+        </p>
+        <div class="about-highlights reveal-up">
+          <div class="highlight-card glass-card">
+            <i data-lucide="graduation-cap"></i>
+            <h4>IT Engineering</h4>
+            <p>Building a solid CS foundation with a focus on data structures, OOP and web technologies.</p>
+          </div>
+          <div class="highlight-card glass-card">
+            <i data-lucide="briefcase"></i>
+            <h4>Real Internship Experience</h4>
+            <p>Shipped UI features and fixed bugs in a live production environment at Prodigy Infotech.</p>
+          </div>
+          <div class="highlight-card glass-card">
+            <i data-lucide="target"></i>
+            <h4>Self-Driven Builder</h4>
+            <p>Independently designed and delivered complete projects from idea to deployment.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline" id="aboutTimeline"></div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <p class="section-tag reveal-up">02 · Skills</p>
+      <h2 class="section-title reveal-up">Tools I build premium products with</h2>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="section">
+    <div class="container">
+      <p class="section-tag reveal-up">03 · Projects</p>
+      <h2 class="section-title reveal-up">Selected work</h2>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE / INTERNSHIP ================= -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <p class="section-tag reveal-up">04 · Experience</p>
+      <h2 class="section-title reveal-up">Internship &amp; Experience</h2>
+      <div class="exp-timeline" id="expTimeline"></div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section id="services" class="section">
+    <div class="container">
+      <p class="section-tag reveal-up">05 · Services</p>
+      <h2 class="section-title reveal-up">What I can do for you</h2>
+      <div class="services-grid" id="servicesGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= WHY HIRE ME ================= -->
+  <section id="why-hire-me" class="section section-alt">
+    <div class="container">
+      <p class="section-tag reveal-up">06 · Why Me</p>
+      <h2 class="section-title reveal-up">Why hire me</h2>
+      <div class="why-grid" id="whyGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= CERTIFICATES ================= -->
+  <section id="certificates" class="section">
+    <div class="container">
+      <p class="section-tag reveal-up">07 · Certificates</p>
+      <h2 class="section-title reveal-up">Certifications &amp; learning</h2>
+      <div class="cert-grid" id="certGrid"></div>
+      <p class="section-note reveal-up">* Sample placeholders — swap in your actual certificate images/links in <code>js/data.js</code>.</p>
+    </div>
+  </section>
+
+  <!-- ================= TECH STACK ORBIT ================= -->
+  <section id="techstack" class="section section-alt">
+    <div class="container">
+      <p class="section-tag reveal-up">08 · Tech Stack</p>
+      <h2 class="section-title reveal-up">My daily toolkit</h2>
+      <div class="orbit-wrap reveal-up">
+        <div class="orbit-system" id="orbitSystem">
+          <div class="orbit-core"><span>PG</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GITHUB ================= -->
+  <section id="github" class="section">
+    <div class="container">
+      <p class="section-tag reveal-up">09 · GitHub</p>
+      <h2 class="section-title reveal-up">Open source activity</h2>
+      <p class="section-note reveal-up">Update the username in <code>js/data.js</code> (<code>githubUsername</code>) to reflect your real GitHub stats.</p>
+      <div class="github-grid reveal-up">
+        <img class="github-card" id="ghStatsImg" alt="GitHub stats" loading="lazy">
+        <img class="github-card" id="ghStreakImg" alt="GitHub streak stats" loading="lazy">
+        <img class="github-card github-langs" id="ghLangsImg" alt="Most used languages" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LEETCODE / DSA ================= -->
+  <section id="leetcode" class="section section-alt">
+    <div class="container">
+      <p class="section-tag reveal-up">10 · DSA Journey</p>
+      <h2 class="section-title reveal-up">Problem solving progress</h2>
+      <div class="leetcode-grid">
+        <div class="leetcode-stats reveal-up" id="leetcodeStats"></div>
+        <div class="leetcode-chart-card glass-card reveal-up">
+          <canvas id="leetcodeChart" height="260"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <p class="section-tag reveal-up">11 · Testimonials</p>
+      <h2 class="section-title reveal-up">Kind words</h2>
+      <div class="testimonial-grid" id="testimonialGrid"></div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="section section-alt">
+    <div class="container contact-grid">
+      <div class="contact-info reveal-up">
+        <p class="section-tag">12 · Contact</p>
+        <h2 class="section-title">Let's build something great</h2>
+        <p class="contact-desc">
+          Have a role, project, or opportunity in mind? I'd love to hear from you.
+          Reach out directly or drop a message using the form.
+        </p>
+        <ul class="contact-list">
+          <li><a href="mailto:premrajgaikwad1@gmail.com" data-magnetic><i data-lucide="mail"></i>premrajgaikwad1@gmail.com</a></li>
+          <li><a href="tel:+919561857309" data-magnetic><i data-lucide="phone"></i>+91 95618 57309</a></li>
+          <li><a href="#" target="_blank" rel="noopener" data-magnetic><i class="fa-brands fa-linkedin-in"></i>LinkedIn Profile</a></li>
+          <li><a href="#" target="_blank" rel="noopener" data-magnetic><i class="fa-brands fa-github"></i>GitHub Profile</a></li>
+        </ul>
+        <a href="assets/Premraj_Gaikwad_Resume_01.pdf" download class="btn btn-outline" data-magnetic>
+          <i data-lucide="download"></i><span>Download Resume</span>
+        </a>
+      </div>
+
+      <form class="contact-form glass-card reveal-up" id="contactForm" action="https://formsubmit.co/premrajgaikwad1@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New portfolio message">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <div class="form-row">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="Name" required placeholder="Your name">
+        </div>
+        <div class="form-row">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="Email" required placeholder="you@example.com">
+        </div>
+        <div class="form-row">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="Message" rows="5" required placeholder="Tell me about your project or opportunity..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit" data-magnetic>
+          <span>Send Message</span><i data-lucide="send"></i>
+        </button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a href="#home" class="footer-logo" data-magnetic>PG<span class="dot">.</span></a>
+    <p class="footer-copy">&copy; <span id="year"></span> Premraj Gaikwad. Crafted with intent.</p>
+    <div class="footer-links">
+      <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:premrajgaikwad1@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+    </div>
+    <a href="#home" class="back-to-top" aria-label="Back to top" data-magnetic><i data-lucide="arrow-up"></i></a>
+  </div>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+
+<script src="js/data.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+</body>
+</html>
